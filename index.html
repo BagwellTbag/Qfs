@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Your Asset Vault – Secure Digital Custody</title>
+  <style>
+    :root{
+      --bg:#0b0f17; --card:#141b27; --muted:#8ea0bf; --text:#e6eefc; --accent:#5ec6ff; --accent-2:#7bffb7;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.3px}
+    .brand-logo{width:28px;height:28px;border-radius:6px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+    nav a{opacity:.9;margin:0 10px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid #2a3a55;color:var(--text)}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:center;padding:36px 0}
+    .hero h1{font-size:clamp(28px,4vw,48px);line-height:1.1;margin:.2em 0}
+    .muted{color:var(--muted)}
+    .card{background:var(--card);border:1px solid #1e2a3f;border-radius:16px;padding:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .kpi{padding:16px;border-radius:14px;background:#0f1522;border:1px solid #20304a;text-align:center}
+    .kpi b{font-size:22px;display:block;margin-bottom:6px}
+    .section{padding:28px 0}
+    .feature{display:flex;gap:14px}
+    .icon{width:36px;height:36px;border-radius:8px;background:#0f1624;border:1px solid #23324b;display:grid;place-items:center;flex:0 0 36px}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .price h3{margin:0 0 6px}
+    .price b{font-size:28px}
+    .faq-item{border:1px solid #1f2c44;border-radius:12px;margin-bottom:10px;overflow:hidden}
+    .faq-q{background:#0e1522;padding:14px 16px;cursor:pointer}
+    .faq-a{display:none;padding:14px 16px;background:#101827;color:var(--muted)}
+    footer{padding:36px 0;color:var(--muted);font-size:14px}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid-3,.pricing{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><div class="brand-logo"></div> YourVault</div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#security">Security</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div>
+        <a class="btn ghost" href="#signin">Sign in</a>
+        <a class="btn" href="#get-started">Get Started</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <span class="muted">Secure Digital Custody</span>
+        <h1>Bank‑grade vaults for your crypto & tokenized assets</h1>
+        <p class="muted">Multi‑sig safes, hardware‑key support, real‑time risk checks, and programmable withdrawals. All in one simple dashboard.</p>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <a class="btn" href="#get-started">Create a vault</a>
+          <a class="btn ghost" href="#docs">Read docs</a>
+        </div>
+        <div class="grid-3" style="margin-top:18px">
+          <div class="kpi"><b>$1.2B+</b><span class="muted">Assets secured (demo)</span></div>
+          <div class="kpi"><b>99.99%</b><span class="muted">Uptime</span></div>
+          <div class="kpi"><b><span aria-label="check">✓</span> SOC‑2</b><span class="muted">Controls in progress</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Quick Vault Setup</h3>
+        <label class="muted">Vault name</label>
+        <input style="width:100%;padding:10px;border-radius:10px;border:1px solid #263754;background:#0d1421;color:var(--text)" placeholder="e.g., Treasury Safe"/>
+        <div class="grid-2" style="margin-top:12px">
+          <div>
+            <label class="muted">Chain</label>
+            <select style="width:100%;padding:10px;border-radius:10px;border:1px solid #263754;background:#0d1421;color:var(--text)">
+              <option>Solana</option><option>Ethereum</option><option>Base</option>
+            </select>
+          </div>
+          <div>
+            <label class="muted">Signers</label>
+            <select style="width:100%;padding:10px;border-radius:10px;border:1px solid #263754;background:#0d1421;color:var(--text)">
+              <option>2 of 3</option><option>3 of 5</option><option>5 of 7</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn" style="margin-top:14px;width:100%">Generate vault</button>
+        <p class="muted" style="margin-top:10px;font-size:13px">Demo UI only. Connect your own backend for real custody logic.</p>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Features</h2>
+      <div class="grid-3">
+        <div class="card feature">
+          <div class="icon">🔐</div>
+          <div><b>Multi‑sig approvals</b><p class="muted">Custom policies per vault and role‑based access.</p></div>
+        </div>
+        <div class="card feature">
+          <div class="icon">🧠</div>
+          <div><b>Risk engine</b><p class="muted">Velocity limits, allowlists, and anomaly alerts before funds move.</p></div>
+        </div>
+        <div class="card feature">
+          <div class="icon">🧱</div>
+          <div><b>Hardware keys</b><p class="muted">Support for Ledger/Trezor and passkeys (WebAuthn).</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" class="section">
+      <h2>Security & Compliance</h2>
+      <div class="grid-3">
+        <div class="card"><b>Defense‑in‑depth</b><p class="muted">Isolated vaults, strict least‑privilege services, encrypted audit trail.</p></div>
+        <div class="card"><b>Continuity</b><p class="muted">24/7 monitoring, disaster recovery tests, and geo‑redundant backups.</p></div>
+        <div class="card"><b>Compliance</b><p class="muted">KYC/AML partner integrations and exportable policy reports.</p></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <h2>Pricing</h2>
+      <div class="pricing">
+        <div class="card price">
+          <h3>Starter</h3>
+          <b>$0</b><span class="muted"> / month</span>
+          <p class="muted">Up to 3 vaults • community support</p>
+          <a class="btn" href="#get-started">Choose</a>
+        </div>
+        <div class="card price">
+          <h3>Pro</h3>
+          <b>$79</b><span class="muted"> / month</span>
+          <p class="muted">Advanced policies • priority support</p>
+          <a class="btn" href="#get-started">Choose</a>
+        </div>
+        <div class="card price">
+          <h3>Enterprise</h3>
+          <b>Custom</b>
+          <p class="muted">SLA, SSO, dedicated infra</p>
+          <a class="btn" href="#contact">Talk to us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <div class="faq-q">Is this non‑custodial or custodial?</div>
+        <div class="faq-a">This template is vendor‑neutral. You can wire it to either model in your backend.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Which chains are supported?</div>
+        <div class="faq-a">The UI lists Solana, Ethereum, and Base by default; edit as needed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do approvals work?</div>
+        <div class="faq-a">Set thresholds per vault (e.g., 2 of 3). Connect to your policy service to enforce.</div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="grid-3">
+        <div>
+          <div class="brand" style="margin-bottom:8px"><div class="brand-logo"></div> YourVault</div>
+          <div>© <span id="y"></span> Your Company. All rights reserved.</div>
+        </div>
+        <div><b>Company</b><br/><a href="#">About</a><br/><a href="#">Careers</a></div>
+        <div><b>Legal</b><br/><a href="#">Terms</a><br/><a href="#">Privacy</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.querySelectorAll('.faq-q').forEach(q=>{
+      q.addEventListener('click',()=>{
+        const a=q.nextElementSibling;
+        a.style.display = a.style.display==='block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
